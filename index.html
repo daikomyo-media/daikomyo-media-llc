@@ -89,13 +89,30 @@
       flex-direction: column;
       align-items: center;
     }
-    .consent-form label {
+    .form-field {
+      margin-bottom: 0.5rem;
+      text-align: left;
+      width: 100%;
+      max-width: 300px;
+    }
+    .form-field label {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+    }
+    .form-field input[type="text"],
+    .form-field input[type="tel"] {
+      width: 100%;
+      padding: 0.3rem;
+      font-size: 0.85rem;
+    }
+    .consent-row {
       display: flex;
       align-items: center;
       margin-bottom: 0.5rem;
       font-size: 0.9rem;
     }
-    .consent-form input[type="checkbox"] {
+    .consent-row input[type="checkbox"] {
       margin-right: 0.4rem;
       transform: scale(1.2);
     }
@@ -136,52 +153,4 @@
 </head>
 <body>
   <div class="container">
-    <!-- Top: Title & Brief Intro -->
-    <header>
-      <h1>Welcome to Daikomyo Media LLC</h1>
-      <p>
-        Daikomyo Media LLC is a media and technology solutions company dedicated to leveraging 
-        modern AI-based workflows, content creation, and platform integration. We focus on ethical, 
-        user-friendly applications that benefit businesses and individuals worldwide.
-      </p>
-    </header>
-
-    <!-- Middle: Contact Details & Twilio Use Info -->
-    <div class="info-section">
-      <h2>Contact Details</h2>
-      <p>
-        <strong>Email:</strong> studentoftheforex@gmail.com<br>
-        <strong>Phone:</strong> +1 (480) 231-8879<br>
-        <strong>Mailing Address:</strong> 2690 E. Hazeltine Way, Gilbert, AZ 85298
-      </p>
-
-      <h2>Use of Twilio Services</h2>
-      <p>
-        We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. 
-        This website is provided as part of our official online presence to verify our toll-free phone 
-        number and demonstrate compliance with Twilio’s verification requirements.
-      </p>
-
-      <h2>Privacy & Compliance</h2>
-      <p>
-        Daikomyo Media LLC respects user privacy and data protection. Any data collected through our 
-        messaging services is handled responsibly in accordance with applicable regulations. This page 
-        is currently a beta version; personal contact details may change in future iterations to 
-        enhance privacy and security.
-      </p>
-
-      <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
-    </div>
-
-    <!-- Bottom: Opt-In & TCPA Consent + Checkbox Form -->
-    <footer>
-      <div class="consent-box">
-        <h2>Opt-In & Consent to Receive SMS</h2>
-        <p>
-          By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
-          automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
-          information, in accordance with the Telephone Consumer Protection Act (TCPA). 
-          <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
-          depending on your mobile service provider. You may opt out at any time by replying 
-          <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
-          contact us at <strong>
+    <!-- Top: Title & Bri
