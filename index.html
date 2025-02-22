@@ -153,4 +153,122 @@
 </head>
 <body>
   <div class="container">
-    <!-- Top: Title & Bri
+    <!-- Top: Title & Brief Intro -->
+    <header>
+      <h1>Welcome to Daikomyo Media LLC</h1>
+      <p>
+        Daikomyo Media LLC is a media and technology solutions company dedicated to leveraging 
+        modern AI-based workflows, content creation, and platform integration. We focus on ethical, 
+        user-friendly applications that benefit businesses and individuals worldwide.
+      </p>
+    </header>
+
+    <!-- Middle: Contact Details & Twilio Use Info -->
+    <div class="info-section">
+      <h2>Contact Details</h2>
+      <p>
+        <strong>Email:</strong> studentoftheforex@gmail.com<br>
+        <strong>Phone:</strong> +1 (480) 231-8879<br>
+        <strong>Mailing Address:</strong> 2690 E. Hazeltine Way, Gilbert, AZ 85298
+      </p>
+
+      <h2>Use of Twilio Services</h2>
+      <p>
+        We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. 
+        This website is provided as part of our official online presence to verify our toll-free phone 
+        number and demonstrate compliance with Twilio’s verification requirements.
+      </p>
+
+      <h2>Privacy & Compliance</h2>
+      <p>
+        Daikomyo Media LLC respects user privacy and data protection. Any data collected through our 
+        messaging services is handled responsibly in accordance with applicable regulations. This page 
+        is currently a beta version; personal contact details may change in future iterations to 
+        enhance privacy and security.
+      </p>
+
+      <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
+    </div>
+
+    <!-- Bottom: Opt-In & TCPA Consent + Form -->
+    <footer>
+      <div class="consent-box">
+        <h2>Opt-In & Consent to Receive SMS</h2>
+        <p>
+          By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
+          automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
+          information, in accordance with the Telephone Consumer Protection Act (TCPA). 
+          <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
+          depending on your mobile service provider. You may opt out at any time by replying 
+          <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
+          contact us at <strong>studentoftheforex@gmail.com</strong>.<br><br>
+          We respect your privacy and will never sell or share your phone number with unauthorized 
+          third parties. See our Privacy & Compliance section above for more details.
+        </p>
+
+        <!-- Consent Form -->
+        <form id="consentForm" class="consent-form">
+          <!-- Contact Name Field -->
+          <div class="form-field">
+            <label for="contactName">Contact Name</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Your Full Name" required>
+          </div>
+          <!-- Phone Number Field -->
+          <div class="form-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1 555-555-5555" required>
+          </div>
+          <!-- Checkbox Row -->
+          <div class="consent-row">
+            <input type="checkbox" id="consentCheckbox" required>
+            <label for="consentCheckbox">I agree to the above Terms and Consent to receive SMS/Calls.</label>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit">Provide Consent</button>
+
+          <!-- Confirmation Message -->
+          <div id="confirmation" class="consent-confirmation" style="display:none;"></div>
+        </form>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Daikomyo Symbol in lower-right corner -->
+  <img src="daikomyo-symbol.png" alt="Daikomyo Symbol" class="symbol">
+
+  <script>
+    // Fake unique ID generation + "send email" simulation
+    document.getElementById('consentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Retrieve form inputs
+      const contactName = document.getElementById('contactName').value.trim();
+      const phoneNumber = document.getElementById('phoneNumber').value.trim();
+      const checkbox = document.getElementById('consentCheckbox');
+
+      // Basic validation
+      if (!contactName || !phoneNumber || !checkbox.checked) {
+        alert('Please fill out your name, phone number, and check the box to provide consent.');
+        return;
+      }
+
+      // Generate a random unique ID
+      const uniqueID = 'DM-' + Math.floor(Math.random() * 1000000);
+
+      // Simulate "sending email" - in reality you'd call an API or server endpoint
+      const confirmationDiv = document.getElementById('confirmation');
+      confirmationDiv.style.display = 'block';
+      confirmationDiv.innerHTML = `
+        <strong>Consent Recorded!</strong><br>
+        Unique ID: <em>${uniqueID}</em><br>
+        Name: <em>${contactName}</em><br>
+        Phone: <em>${phoneNumber}</em><br>
+        (A confirmation email to studentoftheforex@gmail.com has been simulated.)
+      `;
+
+      // Optionally, reset the form
+      document.getElementById('consentForm').reset();
+    });
+  </script>
+</body>
+</html>
