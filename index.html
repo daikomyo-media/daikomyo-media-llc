@@ -1,51 +1,164 @@
-<html>
-  <head>
-    <title>Daikomyo Media LLC</title>
-  </head>
-  <body>
-    <h1>Welcome to Daikomyo Media LLC</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daikomyo Media LLC</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Brief paragraph about your business -->
-    <p>
-      Daikomyo Media LLC is a media and technology solutions company dedicated to leveraging modern AI-based workflows, content creation, and platform integration. We focus on ethical, user-friendly applications that benefit businesses and individuals worldwide.
-    </p>
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Prevents scrolling */
+    }
 
-    <!-- Contact info for Twilio verification -->
-    <h2>Contact Details</h2>
-    <p>
-      Email: <strong>studentoftheforex@gmail.com</strong><br>
-      Phone: <strong>+1 (480) 231-8879</strong><br>
-      Mailing Address: <strong>2690 E. Hazeltine Way, Gilbert, AZ 85298</strong>
-    </p>
+    /* Main Container: fill entire viewport */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      background: #000; /* Black background */
+      color: #F0D18C;   /* Gold-ish text */
+      padding: 1rem;
+    }
 
-    <!-- Mention Twilio usage -->
-    <h2>Use of Twilio Services</h2>
-    <p>
-      We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. This website is provided as part of our official online presence to verify our toll-free phone number and demonstrate compliance with Twilio’s verification requirements.
-    </p>
+    /* Header area (top section) */
+    header {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #D90000; /* Imperial Red for main heading */
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      line-height: 1.4;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-    <!-- Simple privacy note or disclaimer -->
-    <h2>Privacy & Compliance</h2>
-    <p>
-      Daikomyo Media LLC respects user privacy and data protection. Any data collected through our messaging services is handled responsibly in accordance with applicable regulations. This page is currently a beta version; personal contact details may change in future iterations to enhance privacy and security.
-    </p>
+    /* Middle section: business info */
+    .info-section {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .info-section h2 {
+      color: #D90000;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+    .info-section p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 0.8rem;
+    }
 
-    <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
-  </body>
+    /* Footer (opt-in) pinned near bottom, but visible */
+    footer {
+      width: 100%;
+      text-align: center;
+      background: #1A1A1A;
+      padding: 0.5rem 1rem;
+      border-top: 2px solid #D90000;
+    }
+    .consent-box {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .consent-box strong {
+      color: #F0D18C;
+    }
+
+    /* Daikomyo Symbol in lower-right corner */
+    .symbol {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 80px;  /* Adjust as needed */
+      opacity: 0.9; /* Slight transparency */
+    }
+
+    /* Responsive tweak: If screen is very small, allow slight scroll */
+    @media (max-width: 600px) {
+      html, body {
+        overflow: auto; /* Let small screens scroll if needed */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top: Title & Brief Intro -->
+    <header>
+      <h1>Welcome to Daikomyo Media LLC</h1>
+      <p>
+        Daikomyo Media LLC is a media and technology solutions company dedicated to leveraging 
+        modern AI-based workflows, content creation, and platform integration. We focus on ethical, 
+        user-friendly applications that benefit businesses and individuals worldwide.
+      </p>
+    </header>
+
+    <!-- Middle: Contact Details & Twilio Use Info -->
+    <div class="info-section">
+      <h2>Contact Details</h2>
+      <p>
+        <strong>Email:</strong> studentoftheforex@gmail.com<br>
+        <strong>Phone:</strong> +1 (480) 231-8879<br>
+        <strong>Mailing Address:</strong> 2690 E. Hazeltine Way, Gilbert, AZ 85298
+      </p>
+
+      <h2>Use of Twilio Services</h2>
+      <p>
+        We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. 
+        This website is provided as part of our official online presence to verify our toll-free phone 
+        number and demonstrate compliance with Twilio’s verification requirements.
+      </p>
+
+      <h2>Privacy & Compliance</h2>
+      <p>
+        Daikomyo Media LLC respects user privacy and data protection. Any data collected through our 
+        messaging services is handled responsibly in accordance with applicable regulations. This page 
+        is currently a beta version; personal contact details may change in future iterations to 
+        enhance privacy and security.
+      </p>
+
+      <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
+    </div>
+
+    <!-- Bottom: Opt-In & TCPA Consent -->
+    <footer>
+      <div class="consent-box">
+        <h2 style="color:#D90000; margin-bottom:0.5rem;">Opt-In & Consent to Receive SMS</h2>
+        <p>
+          By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
+          automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
+          information, in accordance with the Telephone Consumer Protection Act (TCPA). <br><br>
+          <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
+          depending on your mobile service provider. You may opt out at any time by replying 
+          <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
+          contact us at <strong>studentoftheforex@gmail.com</strong>.<br><br>
+          We respect your privacy and will never sell or share your phone number with unauthorized 
+          third parties. See our Privacy & Compliance section above for more details.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Daikomyo Symbol in lower-right corner -->
+  <img src="daikomyo-symbol.png" alt="Daikomyo Symbol" class="symbol">
+</body>
 </html>
-<h2>Opt-In & Consent to Receive SMS</h2>
-<p>
-  By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
-  automated text messages (SMS) for updates, alerts, or other relevant information. Message 
-  and data rates may apply depending on your mobile service provider.
-</p>
-<p>
-  You may opt out of these messages at any time by replying <strong>STOP</strong>. If you need 
-  further assistance, reply <strong>HELP</strong> or contact us at 
-  <strong>studentoftheforex@gmail.com</strong>.
-</p>
-<p>
-  We respect your privacy and will never sell or share your phone number with unauthorized 
-  third parties. See our Privacy & Compliance section above for more details.
-</p>
+
 
