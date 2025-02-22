@@ -14,10 +14,9 @@
     html, body {
       height: 100%;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* Prevents scrolling */
+      overflow: hidden; /* Prevents scrolling on larger screens */
     }
 
-    /* Main Container: fill entire viewport */
     .container {
       display: flex;
       flex-direction: column;
@@ -29,14 +28,14 @@
       padding: 1rem;
     }
 
-    /* Header area (top section) */
+    /* Header area */
     header {
       text-align: center;
       margin-bottom: 0.5rem;
     }
     header h1 {
       font-size: 2rem;
-      color: #D90000; /* Imperial Red for main heading */
+      color: #D90000; /* Imperial Red */
       margin-bottom: 0.5rem;
     }
     header p {
@@ -63,7 +62,7 @@
       margin-bottom: 0.8rem;
     }
 
-    /* Footer (opt-in) pinned near bottom, but visible */
+    /* Footer area with consent form */
     footer {
       width: 100%;
       text-align: center;
@@ -76,8 +75,45 @@
       margin: 0 auto;
       font-size: 0.85rem;
       line-height: 1.4;
+      color: #F0D18C;
     }
-    .consent-box strong {
+    .consent-box h2 {
+      color: #D90000;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Consent form styles */
+    .consent-form {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .consent-form label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .consent-form input[type="checkbox"] {
+      margin-right: 0.4rem;
+      transform: scale(1.2);
+    }
+    .consent-form button {
+      padding: 0.4rem 1rem;
+      background-color: #D90000;
+      color: #F0D18C;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .consent-form button:hover {
+      background-color: #F0D18C;
+      color: #000;
+    }
+    .consent-confirmation {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
       color: #F0D18C;
     }
 
@@ -87,13 +123,13 @@
       right: 20px;
       bottom: 20px;
       width: 80px;  /* Adjust as needed */
-      opacity: 0.9; /* Slight transparency */
+      opacity: 0.9;
     }
 
-    /* Responsive tweak: If screen is very small, allow slight scroll */
-    @media (max-width: 600px) {
+    /* Responsive tweak: allow scrolling if screen is too small */
+    @media (max-width: 800px) {
       html, body {
-        overflow: auto; /* Let small screens scroll if needed */
+        overflow: auto; 
       }
     }
   </style>
@@ -137,28 +173,15 @@
       <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
     </div>
 
-    <!-- Bottom: Opt-In & TCPA Consent -->
+    <!-- Bottom: Opt-In & TCPA Consent + Checkbox Form -->
     <footer>
       <div class="consent-box">
-        <h2 style="color:#D90000; margin-bottom:0.5rem;">Opt-In & Consent to Receive SMS</h2>
+        <h2>Opt-In & Consent to Receive SMS</h2>
         <p>
           By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
           automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
-          information, in accordance with the Telephone Consumer Protection Act (TCPA). <br><br>
+          information, in accordance with the Telephone Consumer Protection Act (TCPA). 
           <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
           depending on your mobile service provider. You may opt out at any time by replying 
           <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
-          contact us at <strong>studentoftheforex@gmail.com</strong>.<br><br>
-          We respect your privacy and will never sell or share your phone number with unauthorized 
-          third parties. See our Privacy & Compliance section above for more details.
-        </p>
-      </div>
-    </footer>
-  </div>
-
-  <!-- Daikomyo Symbol in lower-right corner -->
-  <img src="daikomyo-symbol.png" alt="Daikomyo Symbol" class="symbol">
-</body>
-</html>
-
-
+          contact us at <strong>
