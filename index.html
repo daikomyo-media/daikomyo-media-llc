@@ -195,43 +195,4 @@
             I agree to the above Terms and Consent to receive SMS/Calls.
           </label>
           <button type="submit">Provide Consent</button>
-          <div id="confirmation" class="consent-confirmation" style="display:none;"></div>
-        </form>
-      </div>
-    </footer>
-  </div>
-
-  <!-- Daikomyo Symbol in lower-right corner -->
-  <img src="daikomyo-symbol.png" alt="Daikomyo Symbol" class="symbol">
-
-  <script>
-    // Fake unique ID generation + "send email" simulation
-    document.getElementById('consentForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Check if checkbox is checked
-      const checkbox = document.getElementById('consentCheckbox');
-      if (!checkbox.checked) {
-        alert('Please check the box to provide consent.');
-        return;
-      }
-
-      // Generate a random unique ID
-      const uniqueID = 'DM-' + Math.floor(Math.random() * 1000000);
-
-      // Simulate "sending email" - in reality you'd call an API or server endpoint
-      // For demonstration, we just show a confirmation message
-      const confirmationDiv = document.getElementById('confirmation');
-      confirmationDiv.style.display = 'block';
-      confirmationDiv.innerHTML = `
-        <strong>Consent Recorded!</strong><br>
-        Unique ID: <em>${uniqueID}</em><br>
-        (A confirmation email to studentoftheforex@gmail.com has been simulated.)
-      `;
-
-      // Optionally, clear the checkbox
-      checkbox.checked = false;
-    });
-  </script>
-</body>
-</html>
+          <div id="confirmation" class="cons
