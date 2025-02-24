@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Daikomyo Media LLC - Shortened</title>
+  <title>Daikomyo Media LLC</title>
   <style>
     /* Basic Reset */
     * {
@@ -14,7 +14,7 @@
     html, body {
       height: 100%;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* No scrolling on larger screens */
+      overflow: hidden; /* Prevents scrolling on larger screens */
     }
 
     .container {
@@ -24,7 +24,7 @@
       align-items: center;
       height: 100vh;
       background: #000; /* Black background */
-      color: #F0D18C;   /* Gold text */
+      color: #F0D18C;   /* Gold-ish text */
       padding: 1rem;
     }
 
@@ -41,25 +41,25 @@
     header p {
       font-size: 1rem;
       line-height: 1.4;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     /* Middle section: business info */
     .info-section {
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
     .info-section h2 {
       color: #D90000;
-      font-size: 1.1rem;
-      margin: 0.8rem 0 0.3rem;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem 0;
     }
     .info-section p {
-      font-size: 0.9rem;
-      line-height: 1.3;
-      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 0.8rem;
     }
 
     /* Footer area with consent form */
@@ -71,17 +71,15 @@
       border-top: 2px solid #D90000;
     }
     .consent-box {
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       font-size: 0.85rem;
-      line-height: 1.3;
+      line-height: 1.4;
       color: #F0D18C;
-      text-align: left;
     }
     .consent-box h2 {
       color: #D90000;
       margin-bottom: 0.5rem;
-      text-align: center;
     }
 
     /* Consent form styles */
@@ -89,15 +87,178 @@
       margin-top: 0.5rem;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
     .form-field {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       margin-bottom: 0.5rem;
+      font-size: 0.9rem;
     }
     .form-field label {
-      font-size: 0.9rem;
       margin-bottom: 0.2rem;
     }
-    .form-field input[type="text
+    .form-field input[type="text"],
+    .form-field input[type="tel"] {
+      padding: 0.3rem;
+      font-size: 0.9rem;
+      width: 200px;
+    }
+    .consent-form label[for="consentCheckbox"] {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .consent-form input[type="checkbox"] {
+      margin-right: 0.4rem;
+      transform: scale(1.2);
+    }
+    .consent-form button {
+      padding: 0.4rem 1rem;
+      background-color: #D90000;
+      color: #F0D18C;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .consent-form button:hover {
+      background-color: #F0D18C;
+      color: #000;
+    }
+    .consent-confirmation {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #F0D18C;
+    }
+
+    /* Daikomyo Symbol in lower-right corner */
+    .symbol {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 80px;  /* Adjust as needed */
+      opacity: 0.9;
+    }
+
+    /* Responsive tweak: allow scrolling if screen is too small */
+    @media (max-width: 800px) {
+      html, body {
+        overflow: auto; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top: Title & Brief Intro -->
+    <header>
+      <h1>Welcome to Daikomyo Media LLC</h1>
+      <p>
+        Daikomyo Media LLC is a media and technology solutions company dedicated to leveraging 
+        modern AI-based workflows, content creation, and platform integration. We focus on ethical, 
+        user-friendly applications that benefit businesses and individuals worldwide.
+      </p>
+    </header>
+
+    <!-- Middle: Contact Details & Twilio Use Info -->
+    <div class="info-section">
+      <h2>Contact Details</h2>
+      <p>
+        <strong>Email:</strong> studentoftheforex@gmail.com<br>
+        <strong>Phone:</strong> +1 (480) 231-8879<br>
+        <strong>Mailing Address:</strong> 2690 E. Hazeltine Way, Gilbert, AZ 85298
+      </p>
+
+      <h2>Use of Twilio Services</h2>
+      <p>
+        We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. 
+        This website is provided as part of our official online presence to verify our toll-free phone 
+        number and demonstrate compliance with Twilio’s verification requirements.
+      </p>
+
+      <h2>Privacy & Compliance</h2>
+      <p>
+        Daikomyo Media LLC respects user privacy and data protection. Any data collected through our 
+        messaging services is handled responsibly in accordance with applicable regulations. This page 
+        is currently a beta version; personal contact details may change in future iterations to 
+        enhance privacy and security.
+      </p>
+
+      <!-- Removed "Thank you for visiting our official site for Twilio verification!" -->
+    </div>
+
+    <!-- Bottom: Opt-In & TCPA Consent + Form -->
+    <footer>
+      <div class="consent-box">
+        <h2>Opt-In & Consent to Receive SMS</h2>
+        <p>
+          By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
+          automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
+          information, in accordance with the Telephone Consumer Protection Act (TCPA). 
+          <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
+          depending on your mobile service provider. You may opt out at any time by replying 
+          <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
+          contact us at <strong>studentoftheforex@gmail.com</strong>.<br><br>
+          We respect your privacy and will never sell or share your phone number with unauthorized 
+          third parties. See our Privacy & Compliance section above for more details.
+        </p>
+        <!-- Consent Form -->
+        <form id="consentForm" class="consent-form">
+          <!-- New Name & Phone fields -->
+          <div class="form-field">
+            <label for="contactName">Contact Name</label>
+            <input type="text" id="contactName" required>
+          </div>
+          <div class="form-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" required>
+          </div>
+
+          <label for="consentCheckbox">
+            <input type="checkbox" id="consentCheckbox" required>
+            I agree to the above Terms and Consent to receive SMS/Calls.
+          </label>
+          <button type="submit">Provide Consent</button>
+          <div id="confirmation" class="consent-confirmation" style="display:none;"></div>
+        </form>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Daikomyo Symbol in lower-right corner -->
+  <img src="daikomyo-symbol.png" alt="Daikomyo Symbol" class="symbol">
+
+  <script>
+    document.getElementById('consentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Gather data
+      const contactName = document.getElementById('contactName').value.trim();
+      const phoneNumber = document.getElementById('phoneNumber').value.trim();
+      const checkbox = document.getElementById('consentCheckbox');
+
+      // Validate fields
+      if (!contactName || !phoneNumber || !checkbox.checked) {
+        alert('Please fill out your name, phone number, and check the consent box.');
+        return;
+      }
+
+      // Generate a random unique ID
+      const uniqueID = 'DM-' + Math.floor(Math.random() * 1000000);
+
+      // Show confirmation
+      const confirmationDiv = document.getElementById('confirmation');
+      confirmationDiv.style.display = 'block';
+      confirmationDiv.innerHTML = `
+        <strong>Consent Recorded!</strong><br>
+        Unique ID: <em>${uniqueID}</em>
+      `;
+
+      // Optionally reset form
+      document.getElementById('consentForm').reset();
+    });
+  </script>
+</body>
+</html>
