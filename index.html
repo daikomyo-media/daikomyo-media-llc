@@ -89,7 +89,23 @@
       flex-direction: column;
       align-items: center;
     }
-    .consent-form label {
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .form-field label {
+      margin-bottom: 0.2rem;
+    }
+    .form-field input[type="text"],
+    .form-field input[type="tel"] {
+      padding: 0.3rem;
+      font-size: 0.9rem;
+      width: 200px;
+    }
+    .consent-form label.checkbox-label {
       display: flex;
       align-items: center;
       margin-bottom: 0.5rem;
@@ -150,49 +166,4 @@
     <div class="info-section">
       <h2>Contact Details</h2>
       <p>
-        <strong>Email:</strong> studentoftheforex@gmail.com<br>
-        <strong>Phone:</strong> +1 (480) 231-8879<br>
-        <strong>Mailing Address:</strong> 2690 E. Hazeltine Way, Gilbert, AZ 85298
-      </p>
-
-      <h2>Use of Twilio Services</h2>
-      <p>
-        We utilize Twilio for secure, reliable SMS messaging to keep our clients and partners informed. 
-        This website is provided as part of our official online presence to verify our toll-free phone 
-        number and demonstrate compliance with Twilio’s verification requirements.
-      </p>
-
-      <h2>Privacy & Compliance</h2>
-      <p>
-        Daikomyo Media LLC respects user privacy and data protection. Any data collected through our 
-        messaging services is handled responsibly in accordance with applicable regulations. This page 
-        is currently a beta version; personal contact details may change in future iterations to 
-        enhance privacy and security.
-      </p>
-
-      <p><em>Thank you for visiting our official site for Twilio verification!</em></p>
-    </div>
-
-    <!-- Bottom: Opt-In & TCPA Consent + Checkbox Form -->
-    <footer>
-      <div class="consent-box">
-        <h2>Opt-In & Consent to Receive SMS</h2>
-        <p>
-          By providing your phone number to Daikomyo Media LLC, you expressly consent to receive 
-          automated text messages (SMS) and phone calls for updates, alerts, or other relevant 
-          information, in accordance with the Telephone Consumer Protection Act (TCPA). 
-          <strong>Consent is not a condition of purchase.</strong> Message and data rates may apply 
-          depending on your mobile service provider. You may opt out at any time by replying 
-          <strong>STOP</strong>. If you need further assistance, reply <strong>HELP</strong> or 
-          contact us at <strong>studentoftheforex@gmail.com</strong>.<br><br>
-          We respect your privacy and will never sell or share your phone number with unauthorized 
-          third parties. See our Privacy & Compliance section above for more details.
-        </p>
-        <!-- Consent Form -->
-        <form id="consentForm" class="consent-form">
-          <label for="consentCheckbox">
-            <input type="checkbox" id="consentCheckbox" required>
-            I agree to the above Terms and Consent to receive SMS/Calls.
-          </label>
-          <button type="submit">Provide Consent</button>
-          <div id="confirmation" class="cons
+        <strong>Email:</strong> student
